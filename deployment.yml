@@ -13,7 +13,7 @@ spec:
         app: flask-web-app
     spec:
       containers:
-        - name: flask-web-app
-          image: flask-monitoring-app:latest
+        - name: flask-web-app-container
+          image: flask-web-app:latest
           ports:
             - containerPort: 5000
