@@ -1,19 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-web-app
+  name: my-app-deployment
+  labels:
+    app: my-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flask-web-app
+      app: my-app
   template:
     metadata:
       labels:
-        app: flask-web-app
+        app: my-app
     spec:
       containers:
-        - name: flask-web-app-container
+        - name: my-app-container
           image: rohit18docker/flask-web-app:latest
           ports:
             - containerPort: 5000
+          env:
+            - name: FLASK_RUN_HOST
+              value: "0.0.0.0"
+  
