@@ -14,6 +14,7 @@ Our application is a simple web application that displays system metrics such as
 Before getting started, ensure you have the following prerequisites installed:
 
 - Docker
+- Git Bash
 
 ## Step-by-Step Guide
 
