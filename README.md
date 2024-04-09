@@ -74,10 +74,16 @@ kubectl port-forward svc/argocd-server -n argo 8080:443
 #### Project: default
 #### Sync policy: Automatic
 #### Repository URL: https://github.com/Rohit3Pandey/Flask-monitoring-app.git
-#### Path: Deployment
+#### Path: Deployment (This is the path to your "deplyment.yml" file which is consisted of all the configurations that will be used by Argo CD to deploy the application)  
 #### Cluster URL: default Kubernetes cluster - https://kubernetes.default.svc
 #### Namespace: default
 
+### After the deployment of the application on Argo CD go to you terminal and run the following commands- 
+
+```bash
+minikube servive my-web-app --url 
+```
+the output of this command would be like this - http://127.0.0.1:50436  
 # Challenges Encountered
 Working with Argo CD for the first time was a challenge in itself. To overcome this, I referred to the official documentation of Argo CD, ChatGPT, and YouTube tutorials.
 
@@ -108,3 +114,5 @@ minikube delete
 
 # Conclusion
 By following this guide, you have successfully set up a GitOps pipeline with Argo CD for continuous deployment in a Kubernetes environment.
+
+
