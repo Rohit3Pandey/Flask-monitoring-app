@@ -13,8 +13,7 @@ Our application is a simple web application that displays system metrics such as
 
 Before getting started, ensure you have the following prerequisites installed:
 
-- Docker Desktop
-- Git Bash
+- Docker
 
 ## Step-by-Step Guide
 
