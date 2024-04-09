@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Metrics</title>
+  <!-- Add this line to include Google Charts -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    #container {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .metrics-box {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px;
+      width: 150px;
+      background-color: #5bc0de;
+      color: white;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    #cpuChart, #memChart {
+      width: 300px;
+      height: 200px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>System Metrics</h1>
+    <!-- Use span instead of div for displaying dynamic content -->
+    <span class="metrics-box" id="cpuMetricsBox">CPU Utilization: <span id="cpu_metric_value">{{ cpu_metric|int }}%</span></span>
+    <div id="cpuChart"></div>
+    <span class="metrics-box" id="memMetricsBox">Memory Usage: <span id="mem_metric_value">{{ mem_metric|int }}%</span></span>
+    <div id="memChart"></div>
+  </div>
+  <script>
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawCharts);
+
+    function drawCharts() {
+      // Draw CPU Chart
+      const cpuData = google.visualization.arrayToDataTable([
+        ['Label', 'Value'],
+        ['CPU', parseInt(document.getElementById('cpu_metric_value').innerText)]
+      ]);
+      const cpuOptions = {
+        pieSliceBorderColor: 'transparent',
+        colors: ['#5bc0de'],
+        pieHole: 0.4,
+        pieSliceText: 'value',
+        pieSliceTextStyle: {
+          color: 'black',
+          fontSize: 20,
+        },
+        legend: 'none',
+        tooltip: {
+          trigger: 'none'
+        },
+      };
+      const cpuChart = new google.visualization.PieChart(document.getElementById('cpuChart'));
+      cpuChart.draw(cpuData, cpuOptions);
+
+      // Draw Memory Chart
+      const memData = google.visualization.arrayToDataTable([
+        ['Label', 'Value'],
+        ['Memory', parseInt(document.getElementById('mem_metric_value').innerText)]
+      ]);
+      const memOptions = {
+        pieSliceBorderColor: 'transparent',
+        colors: ['#5bc0de'],
+        pieHole: 0.4,
+        pieSliceText: 'value',
+        pieSliceTextStyle: {
+          color: 'black',
+          fontSize: 20,
+        },
+        legend: 'none',
+        tooltip: {
+          trigger: 'none'
+        },
+      };
+      const memChart = new google.visualization.PieChart(document.getElementById('memChart'));
+      memChart.draw(memData, memOptions);
+    }
+  </script>
+</body>
+</html>
