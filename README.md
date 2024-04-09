@@ -13,8 +13,9 @@ Our application is a simple web application that displays system metrics such as
 
 Before getting started, ensure you have the following prerequisites installed:
 
-- Docker
-- Git Bash
+- Docker.
+- Git Bash.
+- Minikube: To run a local Kubernetes cluster for testing purposes.
 
 ## Step-by-Step Guide
 
@@ -74,7 +75,7 @@ kubectl port-forward svc/argocd-server -n argo 8080:443
 #### Sync policy: Automatic
 #### Repository URL: https://github.com/Rohit3Pandey/Flask-monitoring-app.git
 #### Path: Deployment
-#### Cluster URL: default Kubernetes cluster
+#### Cluster URL: default Kubernetes cluster - https://kubernetes.default.svc
 #### Namespace: default
 
 # Challenges Encountered
