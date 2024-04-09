@@ -83,7 +83,7 @@ kubectl port-forward svc/argocd-server -n argo 8080:443
 ```bash
 minikube servive my-web-app --url 
 ```
-the output of this command would be like this - http://127.0.0.1:50436  
+the output of this command would be like this - http://127.0.0.1:50436 and you can use this to access your application on browser. 
 # Challenges Encountered
 Working with Argo CD for the first time was a challenge in itself. To overcome this, I referred to the official documentation of Argo CD, ChatGPT, and YouTube tutorials.
 
