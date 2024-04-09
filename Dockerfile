@@ -2,22 +2,21 @@
 FROM python:3.9-slim-buster
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /web-app
 
-# Copy the requirements file to the container at /app
-COPY requirements.txt .
-
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the rest of the application code to the container
+# Copy only the requirements file to the container at /app
 COPY . .
 
-# Expose port 5000 to the outside world
+# RUN & INSTALL DEPENDENCIES
+RUN pip install --upgrade pip
+RUN pip install flask && pip install psutil
+
+# Make port 5000 available to the world outside this container
 EXPOSE 5000
 
-# Set environment variables
+# Define environment variable
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Run the Flask application
+# Run app.py when the container launches
 CMD ["flask", "run"]
+
