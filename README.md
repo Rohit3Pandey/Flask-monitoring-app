@@ -69,13 +69,13 @@ kubectl port-forward svc/argocd-server -n argo 8080:443
 
 ### Create a new application with the following details:
 
-Application name: flask-web-app
-Project: default
-Sync policy: Automatic
-Repository URL: https://github.com/Rohit3Pandey/Flask-monitoring-app.git
-Path: Deployment
-Cluster URL: default Kubernetes cluster
-Namespace: default
+#### Application name: flask-web-app
+#### Project: default
+#### Sync policy: Automatic
+#### Repository URL: https://github.com/Rohit3Pandey/Flask-monitoring-app.git
+#### Path: Deployment
+#### Cluster URL: default Kubernetes cluster
+#### Namespace: default
 
 # Challenges Encountered
 Working with Argo CD for the first time was a challenge in itself. To overcome this, I referred to the official documentation of Argo CD, ChatGPT, and YouTube tutorials.
