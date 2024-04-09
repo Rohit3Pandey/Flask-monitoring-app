@@ -115,4 +115,9 @@ minikube delete
 # Conclusion
 By following this guide, you have successfully set up a GitOps pipeline with Argo CD for continuous deployment in a Kubernetes environment.
 
+# Screenshots for better understandings -
+
+![Argo CD logs](https://github.com/Rohit3Pandey/Images/blob/main/Screenshot%20(100).png)
+
+
 
