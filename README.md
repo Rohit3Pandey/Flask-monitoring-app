@@ -64,6 +64,7 @@ and than go to your browser and search for base 64 decode and decode the encoded
 kubectl port-forward svc/argocd-server -n argo 8080:443
 ```
 ### Access the Argo CD UI by opening a web browser and navigating to https://localhost:8080 and logging in with username "admin" and the password retrieved earlier.
+
 ![Argo CD UI](https://github.com/Rohit3Pandey/Images/blob/main/Screenshot%20(103).png)
 
 ### Step 3: Deploy the Application with Argo CD
