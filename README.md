@@ -64,7 +64,7 @@ and than go to your browser and search for base 64 decode and decode the encoded
 kubectl port-forward svc/argocd-server -n argo 8080:443
 ```
 ### Access the Argo CD UI by opening a web browser and navigating to https://localhost:8080 and logging in with username "admin" and the password retrieved earlier.
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![Argo CD UI](https://github.com/Rohit3Pandey/Images/blob/main/Screenshot%20(103).png)
 
 ### Step 3: Deploy the Application with Argo CD
@@ -86,9 +86,11 @@ kubectl port-forward svc/argocd-server -n argo 8080:443
 minikube servive my-web-app --url 
 ```
 the output of this command would be like this - http://127.0.0.1:50436 and you can use this to access your application on browser. 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![URL](https://github.com/Rohit3Pandey/Images/blob/main/Screenshot%20(102).png)
 
 #### If you see something like this which is shown below than congrats, you have successfully deployed the web-app on kubernetes using Argo CD. 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![Flask-web-app](https://github.com/Rohit3Pandey/Images/blob/main/Screenshot%20(98).png)
 
 # Challenges Encountered
