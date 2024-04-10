@@ -94,7 +94,7 @@ the output of this command would be like this - http://127.0.0.1:50436 and you c
 ![Flask-web-app](https://github.com/Rohit3Pandey/Images/blob/main/Screenshot%20(98).png)
 
 # Challenges Encountered
-Working with Argo CD for the first time was a challenge in itself. To overcome this, I referred to the official documentation of Argo CD, ChatGPT, and YouTube tutorials.
+Navigating the intricacies of Argo CD and orchestrating the deployment of a web application on Kubernetes presented a formidable challenge, particularly for someone approaching these technologies for the first time. In response, I diligently sought out resources and guidance, consulting the official documentation of Argo CD, leveraging insights from ChatGPT, and meticulously studying a variety of YouTube tutorials. Through these efforts, I gained invaluable insights into the nuances of crafting deployment YAML files and mastering essential practices, enabling me to execute the project with confidence and precision.
 
 # Step 4: Documentation and Cleanup
 ### Clean Up
